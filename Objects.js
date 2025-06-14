@@ -1,9 +1,9 @@
-// // Single ton
-// // object literals
-// const Objects = {
-//  name: "hitesh",
+// Single ton
+// object literals
+const Objects = {
+ name: "hitesh",
 
-// };
+};
 // console.log(Objects['name']); // hitesh
 const tind ={}
 tind.id='tjngiuj'

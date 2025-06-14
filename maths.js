@@ -5,9 +5,9 @@ const balance = new Number (100)
 const other =23.564845
 // console.log(other.toFixed(2)) // 23.56
 const hunderder=10100000
-// console.log(hunderder.toLocaleString("en-IN")) // 10,100,000
-// console.log(Math);
-// console.log(Math.abs(-4));
+console.log(hunderder.toLocaleString("en-IN")) // 10,100,000
+console.log(Math);
+console.log(Math.abs(-4));
 
 console.log(Math.random());
 console.log((Math.random()*10) + 1) ;
