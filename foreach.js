@@ -20,3 +20,11 @@
 const numbers = [1, 2, 3, 4, 5];
 const number = numbers.filter((num )=>num >4)
 console.log(number);
+
+const myNumbers = [1, 2, 3, 4, 5];
+
+const newNums= myNumbers
+.map((num)=> num * 10)
+.map((num)=> num + 1)
+.filter((num)=> num > 40)
+console.log(newNums);
