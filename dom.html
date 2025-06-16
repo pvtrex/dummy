@@ -4,10 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .bg-black {
+            margin: 0;
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div class="bg-black" >
-    <h1 class="heading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium error molestias necessitatibus nobis tempore consequuntur aliquam quasi autem magnam iure, eaque, deserunt assumenda qui beatae voluptatem aliquid dignissimos fugit quis. </h1></div>
+    <div class="parent  bg-black">
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thursday</div>
 
+   </div>
+   <script>
+    const parent = document.querySelector('.parent');
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[0].innerHTML);
+   for (let i = 0; i < parent.children.length; i++) {
+       console.log(parent.children[i].innerHTML);
+   }
+   </script>
 </body>
 </html>

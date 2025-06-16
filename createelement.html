@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #424242;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+  <body>
+    <script>
+      const div = document.createElement("div");
+      console.log(div);
+      div.className = "main";
+      div.id = Math.round(Math.random() * 10 + 1);
+      div.setAttribute("title", "This is a div element");
+      div.style.backgroundColor = "lightblue";
+      div.style.padding = "10px";
+      div.style.margin = "10px 0";
+      div.style.borderRadius = "5px";
+      div.style.color = "#333";
+      div.style.fontSize = "16px";
+      div.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)";
+      div.innerText = "This is a dynamically created div element";
+      document.body.appendChild(div);
+
+
+
+
+
+
+
+      
+    </script>
+  </body>
+</html>
