@@ -1,4 +1,4 @@
-## project 1
+## project 01
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -54,4 +54,69 @@
     </body>
 </html>
 
+```
+## project 02
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BMI Calculator</title>
+</head>
+<body>
+  <h1>BMI Calculator</h1>
+  <label for="weight">Weight (kg):</label>
+  <input type="number" id="weight" name="weight"><br><br>
+  <label for="height">Height (cm):</label>
+  <input type="number" id="height" name="height"><br><br>
+  <button onclick="calculateBMI()">Calculate BMI</button>
+  <div id="result"></div>
+
+  <script>
+    function calculateBMI() {
+      const weight = parseFloat(document.getElementById("weight").value);
+      const height = parseFloat(document.getElementById("height").value);
+
+      if (isNaN(weight) || isNaN(height) || height <= 0) {
+        document.getElementById("result").innerText = "Please enter valid weight and height.";
+        return;
+      }
+
+      const heightInMeters = height / 100;
+      const bmi = weight / (heightInMeters * heightInMeters);
+      const bmiResult = "Your BMI is: " + bmi.toFixed(2);
+
+      document.getElementById("result").innerText = bmiResult;
+    }
+  </script>
+</body>
+</html>
+```
+
+
+## project 03
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="clock"></div>
+    <script>
+    const clock = document.getElementById('clock');
+
+    let date = new Date();
+   
+
+    setInterval(function(){
+        date = new Date();
+        clock.innerText = date.toLocaleTimeString();
+        
+    },1000)
+
+    </script>
+</body>
+</html>
 ```
