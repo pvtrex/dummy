@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Asynchronous Projects</h1>
+    <button id="btn1">Click Me!</button>
+    <button id="btn2">Click Me!</button>
+    <script>
+    //     const say = function (){
+    //         console.log("Hello, World!");
+    //          document.querySelector('h1').innerHTML="ha main ayagay"
+    //     }
+     
+    //     const timeout =setTimeout(say,2000)
+    //    document.querySelector('#btn1').addEventListener('click', function() {
+    //        clearTimeout(timeout);
+    //     });
+//  const say = function (){
+//     console.log("Hitesh",Date.now());
+    
+//  }
+//       const time = setInterval(say, 1000);
+//         document.querySelector('#btn1').addEventListener('click', function() {
+//             clearInterval(time);
+//             console.log("Interval cleared");
+//         });
+const bg =document.querySelector('body')
+ let r,g,b;
+ function changecolor(){
+     r = Math.floor(Math.random() * 256);
+     g = Math.floor(Math.random() * 256);
+     b = Math.floor(Math.random() * 256);
+     bg.style.backgroundColor = `rgb(${r},${g},${b})`;
+ }
+ const btn1 = document.querySelector('#btn1');
+ 
+ const btn2 = document.querySelector('#btn2');
+ let time;
+ btn1.addEventListener('click', function() {
+   if(time==null){
+        time = setInterval(changecolor, 1000);
+   }
+   else{
+       console.log("Interval already running");
+   }
+ });
+
+ btn2.addEventListener('click', function() {
+   
+        clearInterval(time);
+        time = null;
+        r = 256;
+        b = 256;
+        g = 256;
+        bg.style.backgroundColor = `rgb(${r},${g},${b})`;
+       
+ });
+
+    </script>
+</body>
+</html>
